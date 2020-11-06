@@ -1,12 +1,12 @@
 <html>
 <body>
     <?php
-    $db = pg_connect('host=ec2-34-202-88-122.compute-1.amazonaws.com dbname=d4uo4us2g2dcb5 user=tmrovmkqcygsfb password=873f73d454dae5222e9c3b484b8041460782e2c7947be8176aef5cb5192dd99e');
+    $db = pg_connect('host=ec2-54-157-88-70.compute-1.amazonaws.com dbname=d2mvggsgdlgfn0 user=jhyqrcvvkcmdxm password=795441b0e992e1c6bbb1e44b6eee26bf82fefcab29078f93b2bb1b186e133b26');
 
     $firstname = pg_escape_string($_POST['firstname']);
     $surname = pg_escape_string($_POST['surname']);
 
-    $query = "INSERT INTO detials VALUES('" . $firstname . "', '" . $surname . "')";
+    $query = "INSERT INTO details VALUES('" . $firstname . "', '" . $surname . "')";
     $result = pg_query($query);
     if (!$result) {
         $errormessage = pg_last_error();
